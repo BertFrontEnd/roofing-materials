@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AIIA,AFAA,IEAI,CFAE;EACJ,WAAW,EAAE,wBAAwB;CACtC;;AEND,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,IAAI;CAChB;;AAED,AAAA,IAAI,CAAC;EDHH,SAAS,ECKU,MAAM;EDJzB,WAAW,ECIgB,GAAG;EAC9B,gBAAgB,EHLC,OAAO;CGMzB;;ACRD,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,SAAS,EJFK,MAAM;EIGpB,MAAM,EAAE,MAAM;CACf",
+    "sources": [
+        "core/sass/style.scss",
+        "core/sass/abstract/_constants.scss",
+        "core/sass/abstract/_placeholders.scss",
+        "core/sass/abstract/_mixins.scss",
+        "core/sass/base/_base.scss",
+        "core/sass/layouts/_wrapper.scss",
+        "core/sass/components/_header.scss",
+        "core/sass/components/_promo.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
