@@ -1,3 +1,8 @@
+.header .header__wrapper .header__menu .menu__item a {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -14,7 +19,64 @@ body {
 
 .wrapper {
   position: relative;
-  max-width: 1920px;
+  max-width: 1570px;
   margin: 0 auto;
+}
+
+.header {
+  width: 100vw;
+  height: 80px;
+  background-color: transparent;
+}
+
+.header .header__wrapper {
+  height: 100%;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.07);
+}
+
+.header .header__wrapper .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+
+.header .header__wrapper .header__menu .menu__item a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.header .header__wrapper .header__menu .menu__item a:hover {
+  color: #f38120;
+}
+
+.header .header__wrapper .header__menu:first-child {
+  background-image: url("./assets/icons/home.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.header .header__wrapper .header__menu:first-child .home {
+  display: block;
+  background-color: transparent;
+  width: 23px;
+  height: 22px;
 }
 /*# sourceMappingURL=style.css.map */
