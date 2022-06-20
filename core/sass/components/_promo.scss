@@ -1,0 +1,111 @@
+.promo {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/images/background-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  .promo__wrapper {
+    padding-top: 102px;
+
+    .promo__info {
+      @include alignment(space-between, center, row, nowrap);
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+
+      .info__item {
+        @include font-size(1.2rem, 500);
+        color: $primary-text-color;
+
+        span {
+          @include font-size(1.2rem, 600);
+        }
+      }
+
+      .offer {
+        width: 210px;
+        text-align: center;
+
+        p:first-child {
+          margin-bottom: 20px;
+        }
+
+        p:last-child {
+          padding: 0 10px;
+        }
+      }
+
+      .link {
+        width: 220px;
+        text-align: right;
+
+        span {
+          a {
+            position: relative;
+            @extend %transition;
+
+            &:hover {
+              color: $link-hover-color;
+            }
+
+            &::before {
+              position: absolute;
+              top: 50%;
+              left: -60px;
+              width: 44px;
+              height: 44px;
+              content: '';
+              border-radius: 50%;
+              background-color: $link-bg-color;
+              background-image: url('./assets/icons/pdf.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: auto;
+              box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+              transform: translateY(-50%);
+            }
+
+            &::after {
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              content: '';
+              background-image: url('./assets/icons/dot.svg');
+              background-position: 0 12px;
+              background-size: 5px 2px;
+              background-repeat: repeat-x;
+            }
+          }
+        }
+      }
+
+      .logo {
+        width: 274px;
+        height: 148px;
+
+        a {
+          display: block;
+          width: inherit;
+          height: inherit;
+          background-image: url('./assets/logo.png');
+          background-position: center;
+          background-size: 150%;
+          background-repeat: no-repeat;
+          /* box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.03); */
+        }
+      }
+
+      .messages {
+        width: 160px;
+      }
+
+      .jingle {
+        width: 243px;
+      }
+    }
+  }
+}

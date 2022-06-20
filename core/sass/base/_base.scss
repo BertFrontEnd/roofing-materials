@@ -7,3 +7,8 @@ body {
   @include font-size(1.6rem, 500);
   background-color: $primary-bg-color;
 }
+
+a {
+  text-decoration: none;
+  color: $primary-text-color;
+}
