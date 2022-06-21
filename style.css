@@ -1,4 +1,4 @@
-.header .header__wrapper .header__menu .menu__item a, .promo .promo__wrapper .promo__info .link span a {
+.header .header__wrapper .header__menu .menu__item a, .promo .promo__wrapper .promo__info .link span a, .promo .promo__wrapper .promo__info .connection .messengers li, .promo .promo__wrapper .promo__info .jingle .call-button {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -20,6 +20,12 @@ body {
 a {
   text-decoration: none;
   color: #1c1c1c;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 .wrapper {
@@ -154,10 +160,6 @@ a {
   position: relative;
 }
 
-.promo .promo__wrapper .promo__info .link span a:hover {
-  color: #f38120;
-}
-
 .promo .promo__wrapper .promo__info .link span a::before {
   position: absolute;
   top: 50%;
@@ -206,11 +208,163 @@ a {
   /* box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.03); */
 }
 
-.promo .promo__wrapper .promo__info .messages {
+.promo .promo__wrapper .promo__info .connection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 160px;
 }
 
+.promo .promo__wrapper .promo__info .connection p {
+  position: relative;
+  padding-left: 8px;
+  margin-bottom: 14px;
+}
+
+.promo .promo__wrapper .promo__info .connection p::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  content: '';
+  border-radius: 50%;
+  background-color: #12c868;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-column-gap: 14px;
+          column-gap: 14px;
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers li {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers li:hover {
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: inherit;
+  height: inherit;
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers .viber {
+  background-color: #976fcc;
+  background-image: url("./assets/icons/viber.svg");
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers .whatsapp {
+  background-color: #12c868;
+  background-image: url("./assets/icons/whatsapp.svg");
+}
+
+.promo .promo__wrapper .promo__info .connection .messengers .telegram {
+  background-color: #05a0eb;
+  background-image: url("./assets/icons/telegram.svg");
+}
+
 .promo .promo__wrapper .promo__info .jingle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 243px;
+  text-align: center;
+}
+
+.promo .promo__wrapper .promo__info .jingle .time-working {
+  margin-bottom: 6px;
+}
+
+.promo .promo__wrapper .promo__info .jingle .call-number {
+  margin-bottom: 6px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.promo .promo__wrapper .promo__info .jingle .call-button {
+  position: relative;
+  letter-spacing: 0.5px;
+  color: #12c868;
+  cursor: pointer;
+}
+
+.promo .promo__wrapper .promo__info .jingle .call-button::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 90%;
+  height: 100%;
+  content: '';
+  background-image: url("./assets/icons/dot.svg");
+  background-position: 0 12px;
+  background-size: 5px 2px;
+  background-repeat: repeat-x;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=style.css.map */

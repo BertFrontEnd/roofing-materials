@@ -46,10 +46,6 @@
             position: relative;
             @extend %transition;
 
-            &:hover {
-              color: $link-hover-color;
-            }
-
             &::before {
               position: absolute;
               top: 50%;
@@ -99,12 +95,105 @@
         }
       }
 
-      .messages {
+      .connection {
+        @include alignment(center, center, column, nowrap);
         width: 160px;
+
+        p {
+          position: relative;
+          padding-left: 8px;
+          margin-bottom: 14px;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            content: '';
+            border-radius: 50%;
+            background-color: $dot-bg-color;
+            transform: translateY(-50%);
+          }
+        }
+
+        .messengers {
+          @include alignment(center, center, row, nowrap);
+          column-gap: 14px;
+
+          li {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            @extend %transition;
+
+            &:hover {
+              box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+            }
+
+            a {
+              @include alignment(center, center, row, nowrap);
+              width: inherit;
+              height: inherit;
+            }
+          }
+
+          .viber {
+            background-color: $viber-bg-color;
+            background-image: url('./assets/icons/viber.svg');
+          }
+
+          .whatsapp {
+            background-color: $whatsapp-bg-color;
+            background-image: url('./assets/icons/whatsapp.svg');
+          }
+
+          .telegram {
+            background-color: $telegram-bg-color;
+            background-image: url('./assets/icons/telegram.svg');
+          }
+        }
       }
 
       .jingle {
+        @include alignment(center, center, column, nowrap);
         width: 243px;
+        text-align: center;
+
+        .time-working {
+          margin-bottom: 6px;
+        }
+
+        .call-number {
+          margin-bottom: 6px;
+          @include font-size(2.2rem, 600);
+          letter-spacing: 1px;
+        }
+
+        .call-button {
+          position: relative;
+          letter-spacing: 0.5px;
+          color: $call-text-color;
+          @extend %transition;
+          cursor: pointer;
+
+          &::after {
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            width: 90%;
+            height: 100%;
+            content: '';
+            background-image: url('./assets/icons/dot.svg');
+            background-position: 0 12px;
+            background-size: 5px 2px;
+            background-repeat: repeat-x;
+            transform: translateX(-50%);
+          }
+        }
       }
     }
   }
