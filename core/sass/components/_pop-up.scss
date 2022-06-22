@@ -1,0 +1,160 @@
+.pop-up__element {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include alignment(center, center, column, nowrap);
+  width: 550px;
+  height: 650px;
+  border-radius: 35px;
+  font-size: 0;
+  background-image: url('./assets/images/background-pop-up.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+
+  .element__close {
+    position: absolute;
+    top: 45px;
+    right: 47px;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  .element__title {
+    width: 356px;
+    @include font-size(3rem, 500);
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  .element__description {
+    width: 340px;
+    @include font-size(1.6rem, 300);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .element__time {
+    width: 206px;
+    @include font-size(1.2rem, 300);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .element__call {
+    width: 252px;
+    @include font-size(1.2rem, 300);
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  .element__form {
+    form {
+      position: relative;
+      @include alignment(center, center, column, nowrap);
+
+      input[type='tel'] {
+        width: 356px;
+        padding: 29px 84px 29px 46px;
+        margin-bottom: 24px;
+        border-radius: 500px;
+        @include font-size(1.8rem, 400);
+        background-color: $input-phone-bg-color;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+
+        &::placeholder {
+          letter-spacing: 5px;
+        }
+      }
+
+      input[type='submit'] {
+        width: 356px;
+        padding: 31px 84px 31px 50px;
+        margin-bottom: 20px;
+        border-radius: 500px;
+        letter-spacing: 0.5px;
+        @include font-size(1.6rem, 600);
+        color: $order-text-color;
+        background-color: $input-send-bg-color;
+        box-shadow: inset 0px 0px 17px rgba(255, 255, 255, 0.25);
+        cursor: pointer;
+        @extend %transition;
+
+        &:hover {
+          background-color: $call-hover-bg-color;
+        }
+      }
+
+      .arrow {
+        display: block;
+        position: absolute;
+        bottom: 52px;
+        right: 90px;
+        width: 20px;
+        height: 20px;
+        background-image: url('./assets/icons/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .policy {
+    position: relative;
+    width: 356px;
+    padding-left: 46px;
+
+    input[type='checkbox'] {
+      display: none;
+      appearance: none;
+
+      &:checked {
+        ~ .text {
+          .custom-checkbox {
+            background-image: url('./assets/icons/check.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+          }
+        }
+      }
+    }
+
+    .custom-checkbox {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      background-color: $check-text-color;
+      transform: translateY(-50%);
+
+      cursor: pointer;
+    }
+
+    .text {
+      @include font-size(1.2rem, 500);
+      color: $primary-text-color;
+    }
+
+    .link {
+      @include font-size(1.2rem, 500);
+      color: $policy-text-color;
+    }
+  }
+}
+
+.active {
+  display: none;
+}

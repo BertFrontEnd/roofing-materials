@@ -302,6 +302,7 @@
             @include font-size(1.4rem, 600);
             text-align: center;
             color: $order-text-color;
+            box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
 
             &::after {
               position: absolute;
